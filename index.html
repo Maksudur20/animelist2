@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Explorer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+        <p>Loading anime data...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Anime Explorer</h1>
+            <p>Discover your next favorite anime series</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for anime...">
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="filter-options">
+                <div>
+                    <span class="filter-label">Type:</span>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="TV">TV</option>
+                        <option value="Movie">Movie</option>
+                        <option value="OVA">OVA</option>
+                        <option value="Special">Special</option>
+                        <option value="ONA">ONA</option>
+                        <option value="Music">Music</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="filter-label">Status:</span>
+                    <select id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="Airing">Currently Airing</option>
+                        <option value="Complete">Completed</option>
+                        <option value="Upcoming">Upcoming</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="filter-label">Sort by:</span>
+                    <select id="sortFilter">
+                        <option value="title">Title (A-Z)</option>
+                        <option value="score">Rating (High to Low)</option>
+                        <option value="start_date">Release Date (Newest)</option>
+                        <option value="members">Popularity</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anime Grid -->
+        <section class="anime-grid" id="animeContainer">
+            <!-- Will be populated by JavaScript -->
+        </section>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Anime Details Modal -->
+    <div class="modal" id="animeModal">
+        <div class="modal-content">
+            <button class="close-button" id="closeModal">&times;</button>
+            <div id="animeDetails">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
